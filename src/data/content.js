@@ -28,6 +28,11 @@ export const skills = [
     items: ['Figma Auto Layout', 'Component Libraries', 'Advanced Prototyping', 'Adobe XD', 'Photoshop', 'Illustrator'],
   },
   {
+    title: 'AI Tools',
+    icon: 'spark',
+    items: ['ChatGPT', 'Figma AI', 'Gemini', 'Claude', 'v0'],
+  },
+  {
     title: 'UX Research & Design',
     icon: 'compass',
     items: ['Wireframing (Lo→Hi Fidelity)', 'User Flows', 'Information Architecture', 'Responsive Web Design', 'Cross-Platform Consistency', 'Mobile App Design'],
