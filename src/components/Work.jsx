@@ -2,6 +2,14 @@ import { work } from '../data/content'
 import Reveal from './Reveal'
 import { Arrow } from './Icons'
 
+// The first project is shown large. If the rest would leave one card alone on
+// the last row, that card is shown large too, with the image on the right.
+const featuredClass = (i, total) => {
+  if (i === 0) return ' featured'
+  if (i === total - 1 && total % 2 === 0) return ' featured reverse'
+  return ''
+}
+
 export default function Work() {
   return (
     <section className="section container" id="work">
@@ -14,7 +22,7 @@ export default function Work() {
         </div>
         <Reveal delay={0.1}>
           <p className="section-lead">
-            Recent builds across travel, SaaS, fitness, healthcare and D2C e-commerce.
+            Recent builds across travel, fintech, SaaS, fitness, healthcare and D2C e-commerce.
             Every one is live, so click through and try it.
           </p>
         </Reveal>
@@ -25,7 +33,7 @@ export default function Work() {
           <Reveal
             key={p.name}
             delay={0.04 + (i % 2) * 0.08}
-            className={`work-item${i === 0 ? ' featured' : ''}`}
+            className={`work-item${featuredClass(i, work.length)}`}
           >
             <a className="work-card" href={p.url} target="_blank" rel="noopener noreferrer">
               <div className="work-shot">

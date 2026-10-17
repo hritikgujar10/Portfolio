@@ -18,7 +18,7 @@ export const stats = [
   { value: '3+', label: 'Years designing products' },
   { value: '30+', label: 'Reusable UI components built' },
   { value: 'WCAG', label: 'Accessibility-first mindset' },
-  { value: '5', label: 'Live websites shipped' },
+  { value: '6', label: 'Live websites shipped' },
 ]
 
 export const skills = [
@@ -142,6 +142,16 @@ export const work = [
     tags: ['Scheduling', 'Pricing', 'Mobile-first'],
     url: 'https://pulse-studio-orpin.vercel.app/',
     image: '/projects/pulse-studio.webp',
+  },
+  {
+    name: 'Artha',
+    category: 'Fintech · Personal finance app',
+    year: '2026',
+    blurb:
+      'A private personal-finance app that puts your money in a global context: one dashboard for net worth, budgets with a daily pace line, savings goals and a multi-asset portfolio, alongside live currency, crypto and gold rates.',
+    tags: ['Fintech', 'Dashboard', 'Data Viz'],
+    url: 'https://artha-finance-woad.vercel.app/',
+    image: '/projects/artha-finance.webp',
   },
 ]
 

@@ -241,6 +241,9 @@ h1 em, h2 em {
   display: grid; grid-template-columns: 1.6fr 1fr; gap: 48px; align-items: center;
 }
 
+.work-item.featured.reverse .work-card { grid-template-columns: 1fr 1.6fr; }
+.work-item.featured.reverse .work-shot { order: 2; }
+
 .work-shot {
   position: relative; overflow: hidden;
   border-radius: var(--radius-lg);
@@ -423,7 +426,9 @@ h1 em, h2 em {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1000px) {
-  .work-item.featured .work-card { grid-template-columns: 1fr; gap: 24px; }
+  .work-item.featured .work-card,
+  .work-item.featured.reverse .work-card { grid-template-columns: 1fr; gap: 24px; }
+  .work-item.featured.reverse .work-shot { order: 0; }
   .case-row { grid-template-columns: 40px 1fr 80px; }
   .case-body { grid-column: 2 / -1; }
   .skill-row { grid-template-columns: 260px 1fr; }
