@@ -7,8 +7,8 @@ export const profile = {
   tagline: 'Designing intuitive, accessible, data-rich product experiences.',
   location: 'West Haven, CT',
   email: 'hritikgujar10@gmail.com',
-  phone: '+1 (203) 503-4134',
-  linkedin: 'https://www.linkedin.com/',
+  phone: '+1 (475) 372-6308',
+  linkedin: 'https://linkedin.com/in/hritikgujar',
   github: 'https://github.com/hritikgujar10',
   summary:
     'UI/UX Product Designer with over 3 years of experience creating user-friendly mobile applications and data-rich web platforms. I own complete design processes in Figma, from research to scalable design systems, with a firm commitment to accessibility (WCAG). Backed by an MS in Digital Marketing, I blend UX strategy and Conversion Rate Optimization to turn user-behavior insights into measurable product growth.',
