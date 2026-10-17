@@ -57,9 +57,9 @@ export const experience = [
     period: 'Jul 2026 – Present',
     tag: 'Nonprofit',
     points: [
-      'Create user-focused web and mobile experiences by developing user flows, wireframes, high-fidelity UI designs and interactive prototypes in Figma.',
-      'Perform UX research and usability testing to uncover user requirements, confirm design choices and enhance the overall user experience.',
-      'Work alongside product managers, developers and cross-functional teams in an Agile setting to deliver intuitive, user-centered solutions.',
+      'Created web and mobile experiences focused on users by developing user flows, wireframes, high-fidelity UI designs, and interactive prototypes using Figma.',
+      'Performed UX research and usability testing to uncover user requirements, confirm design choices, and enhance the overall user experience.',
+      'Worked alongside product managers, developers, and cross-functional teams in an Agile setting to provide intuitive, user-centered digital solutions.',
     ],
   },
   {
