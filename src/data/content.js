@@ -57,9 +57,9 @@ export const experience = [
     period: 'Jul 2026 – Present',
     tag: 'Nonprofit',
     points: [
-      'Created web and mobile experiences focused on users by developing user flows, wireframes, high-fidelity UI designs, and interactive prototypes using Figma.',
-      'Performed UX research and usability testing to uncover user requirements, confirm design choices, and enhance the overall user experience.',
-      'Worked alongside product managers, developers, and cross-functional teams in an Agile setting to provide intuitive, user-centered digital solutions.',
+      'Designed web and mobile interfaces for Dreamstream, the volunteer and program-management platform of Community Dreams Foundation, creating user flows, wireframes, and high-fidelity prototypes in Figma.',
+      'Delivered consistent, responsive page designs across web and mobile, supporting onboarding and program management for volunteers, interns, and program leaders.',
+      'Collaborated with product managers and developers in an Agile setup, handing off design specs for the live platform at cdreamstream.org.',
     ],
   },
   {
