@@ -1,17 +1,18 @@
 import { projects } from '../data/content'
 import Reveal from './Reveal'
+import { Arrow } from './Icons'
 
 export default function Projects() {
   return (
     <section className="section container" id="projects">
       <Reveal><span className="eyebrow">Selected Work</span></Reveal>
       <Reveal delay={0.05}>
-        <h2 className="section-title">Projects across healthcare, B2B & analytics.</h2>
+        <h2 className="section-title">Projects across healthcare, e-commerce & B2B.</h2>
       </Reveal>
       <Reveal delay={0.1}>
         <p className="section-lead">
-          A snapshot of products I've designed, from patient-facing apps to enterprise
-          dashboards and a Fortune 500 B2B platform.
+          A snapshot of products I've designed, from live websites and patient-facing apps
+          to enterprise dashboards and a Fortune 500 B2B platform.
         </p>
       </Reveal>
 
@@ -30,6 +31,11 @@ export default function Projects() {
               <div className="project-tags">
                 {p.tags.map((t) => <span key={t}>{t}</span>)}
               </div>
+              {p.url && (
+                <a className="project-link" href={p.url} target="_blank" rel="noopener noreferrer">
+                  View live site <Arrow />
+                </a>
+              )}
             </article>
           </Reveal>
         ))}

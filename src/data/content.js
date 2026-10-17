@@ -93,6 +93,26 @@ export const experience = [
 
 export const projects = [
   {
+    name: 'Craft Fuel',
+    org: 'D2C E-commerce · Website',
+    year: '2026',
+    blurb:
+      'A storefront for a high-protein oats and peanut butter brand: bold product-led landing page, quick-add product cards, bundles, nutrition breakdowns and social proof designed to drive conversion.',
+    tags: ['E-commerce', 'CRO', 'Responsive Web'],
+    accent: '#FBBF24',
+    url: 'https://craft-fuel.vercel.app/',
+  },
+  {
+    name: 'VIVA Physio Clinic',
+    org: 'Healthcare · Clinic Website',
+    year: '2026',
+    blurb:
+      'A calm, trust-building website for a physiotherapy clinic in Navi Mumbai: conditions and treatments made scannable, practitioner credentials up front, patient reviews and a clear path to book a session.',
+    tags: ['Healthcare', 'Local Business', 'Responsive Web'],
+    accent: '#5EEAD4',
+    url: 'https://viva-physio-clinic.vercel.app/',
+  },
+  {
     name: 'Patient-Facing Healthcare App',
     org: 'Swasthya Lifescience',
     year: '2023–24',
