@@ -209,6 +209,8 @@ export const education = [
 ]
 
 export const certifications = [
+  'The AI-Driven Product Designer · LinkedIn Learning',
+  'Enhancing Your Productivity as a Data Scientist with Generative AI · LinkedIn Learning',
   'Foundations of Responsible AI · LinkedIn Learning',
   'Business Analysis: Essential Tools · LinkedIn Learning',
   'Web Analytics & Marketing Metrics · MBTN Academy',
