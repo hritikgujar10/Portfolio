@@ -6,7 +6,7 @@ export default function Experience() {
     <section className="section container" id="experience">
       <Reveal><span className="eyebrow">Experience</span></Reveal>
       <Reveal delay={0.05}>
-        <h2 className="section-title">Where I've shipped design that matters.</h2>
+        <h2 className="section-title">Where I've shipped design <em>that matters</em>.</h2>
       </Reveal>
 
       <div className="timeline">

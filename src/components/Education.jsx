@@ -7,7 +7,7 @@ export default function Education() {
     <section className="section container" id="education">
       <Reveal><span className="eyebrow">Credentials</span></Reveal>
       <Reveal delay={0.05}>
-        <h2 className="section-title">Education & certifications.</h2>
+        <h2 className="section-title">Education <em>&amp;</em> certifications.</h2>
       </Reveal>
 
       <div className="edu-certs">

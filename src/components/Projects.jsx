@@ -1,41 +1,40 @@
 import { projects } from '../data/content'
 import Reveal from './Reveal'
-import { Arrow } from './Icons'
 
 export default function Projects() {
   return (
     <section className="section container" id="projects">
-      <Reveal><span className="eyebrow">Selected Work</span></Reveal>
-      <Reveal delay={0.05}>
-        <h2 className="section-title">Projects across healthcare, e-commerce & B2B.</h2>
-      </Reveal>
-      <Reveal delay={0.1}>
-        <p className="section-lead">
-          A snapshot of products I've designed, from live websites and patient-facing apps
-          to enterprise dashboards and a Fortune 500 B2B platform.
-        </p>
-      </Reveal>
+      <div className="section-head">
+        <div>
+          <Reveal><span className="eyebrow">Case Studies</span></Reveal>
+          <Reveal delay={0.05}>
+            <h2 className="section-title">Product design across healthcare <em>&amp;</em> B2B.</h2>
+          </Reveal>
+        </div>
+        <Reveal delay={0.1}>
+          <p className="section-lead">
+            Work from in-house and agency roles, from patient-facing apps to enterprise
+            dashboards and a Fortune 500 ordering platform.
+          </p>
+        </Reveal>
+      </div>
 
-      <div className="projects-grid">
+      <div className="case-list">
         {projects.map((p, i) => (
-          <Reveal key={p.name} delay={0.05 + i * 0.06}>
-            <article className="project-card">
-              <div className="project-glow" style={{ background: p.accent }} />
-              <div className="project-top">
-                <span className="project-index">{String(i + 1).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}</span>
-                <span className="project-year">{p.year}</span>
+          <Reveal key={p.name} delay={0.04 + i * 0.05}>
+            <article className="case-row">
+              <span className="case-index">{String(i + 1).padStart(2, '0')}</span>
+              <div className="case-title">
+                <h3>{p.name}</h3>
+                <div className="case-org">{p.org}</div>
               </div>
-              <h3>{p.name}</h3>
-              <div className="project-org">{p.org}</div>
-              <p className="project-blurb">{p.blurb}</p>
-              <div className="project-tags">
-                {p.tags.map((t) => <span key={t}>{t}</span>)}
+              <div className="case-body">
+                <p>{p.blurb}</p>
+                <div className="tags">
+                  {p.tags.map((t) => <span key={t}>{t}</span>)}
+                </div>
               </div>
-              {p.url && (
-                <a className="project-link" href={p.url} target="_blank" rel="noopener noreferrer">
-                  View live site <Arrow />
-                </a>
-              )}
+              <span className="case-year">{p.year}</span>
             </article>
           </Reveal>
         ))}

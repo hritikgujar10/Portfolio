@@ -5,9 +5,9 @@ import { Mail, LinkedIn, Github, Arrow } from './Icons'
 export default function Contact() {
   return (
     <section className="section contact container" id="contact">
-      <Reveal><span className="eyebrow" style={{ justifyContent: 'center' }}>Contact</span></Reveal>
+      <Reveal><span className="eyebrow">Contact</span></Reveal>
       <Reveal delay={0.05}>
-        <h2>Let's build something<br /><span className="accent">people love to use.</span></h2>
+        <h2>Let's build something<br />people <em>love</em> to use.</h2>
       </Reveal>
       <Reveal delay={0.1}>
         <p className="contact-lead">

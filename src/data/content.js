@@ -9,7 +9,7 @@ export const profile = {
   email: 'hritikgujar10@gmail.com',
   phone: '+1 (203) 503-4134',
   linkedin: 'https://www.linkedin.com/',
-  github: 'https://github.com/',
+  github: 'https://github.com/hritikgujar10',
   summary:
     'UI/UX Product Designer with over 3 years of experience creating user-friendly mobile applications and data-rich web platforms. I own complete design processes in Figma, from research to scalable design systems, with a firm commitment to accessibility (WCAG). Backed by an MS in Digital Marketing, I blend UX strategy and Conversion Rate Optimization to turn user-behavior insights into measurable product growth.',
 }
@@ -18,7 +18,7 @@ export const stats = [
   { value: '3+', label: 'Years designing products' },
   { value: '30+', label: 'Reusable UI components built' },
   { value: 'WCAG', label: 'Accessibility-first mindset' },
-  { value: '3', label: 'Industries: health, FMCG, AI' },
+  { value: '5', label: 'Live websites shipped' },
 ]
 
 export const skills = [
@@ -91,27 +91,62 @@ export const experience = [
   },
 ]
 
-export const projects = [
+// Live websites, shown with a homepage thumbnail from /public/projects.
+export const work = [
   {
-    name: 'Craft Fuel',
-    org: 'D2C E-commerce · Website',
+    name: 'Aura Stays',
+    category: 'Travel · Booking platform',
     year: '2026',
     blurb:
-      'A storefront for a high-protein oats and peanut butter brand: bold product-led landing page, quick-add product cards, bundles, nutrition breakdowns and social proof designed to drive conversion.',
-    tags: ['E-commerce', 'CRO', 'Responsive Web'],
-    accent: '#FBBF24',
+      'A boutique-stays booking experience: an immersive search-first hero, filterable featured villas, and a bento of concierge chat, live weather and an Apple Wallet stay pass that sells the service by showing it.',
+    tags: ['Booking UX', 'Bento UI', 'Light / Dark'],
+    url: 'https://aura-stays-green.vercel.app/',
+    image: '/projects/aura-stays.webp',
+  },
+  {
+    name: 'Craft Fuel',
+    category: 'D2C E-commerce',
+    year: '2026',
+    blurb:
+      'A storefront for a high-protein oats and peanut butter brand, with quick-add product cards, bundles, nutrition breakdowns and social proof designed to drive conversion.',
+    tags: ['E-commerce', 'CRO', 'Branding'],
     url: 'https://craft-fuel.vercel.app/',
+    image: '/projects/craft-fuel.webp',
+  },
+  {
+    name: 'Nimbus',
+    category: 'AI SaaS · Product landing',
+    year: '2026',
+    blurb:
+      'Landing page for an AI meeting-notes app, built around a live-transcript phone mockup and interactive summary, action-item and transcript tabs.',
+    tags: ['SaaS', 'AI Product', 'Interaction'],
+    url: 'https://nimbus-notes-sigma.vercel.app/',
+    image: '/projects/nimbus.webp',
   },
   {
     name: 'VIVA Physio Clinic',
-    org: 'Healthcare · Clinic Website',
+    category: 'Healthcare · Clinic website',
     year: '2026',
     blurb:
-      'A calm, trust-building website for a physiotherapy clinic in Navi Mumbai: conditions and treatments made scannable, practitioner credentials up front, patient reviews and a clear path to book a session.',
-    tags: ['Healthcare', 'Local Business', 'Responsive Web'],
-    accent: '#5EEAD4',
+      'A calm, trust-building site for a physiotherapy clinic: scannable conditions and treatments, practitioner credentials up front and a clear path to book.',
+    tags: ['Healthcare', 'Local Business', 'Accessibility'],
     url: 'https://viva-physio-clinic.vercel.app/',
+    image: '/projects/viva-physio.webp',
   },
+  {
+    name: 'Pulse Studio',
+    category: 'Fitness · Class booking',
+    year: '2026',
+    blurb:
+      'A boutique fitness studio with a bookable weekly schedule, class filters, coach profiles and membership pricing, in an Apple Fitness-inspired visual language.',
+    tags: ['Scheduling', 'Pricing', 'Mobile-first'],
+    url: 'https://pulse-studio-orpin.vercel.app/',
+    image: '/projects/pulse-studio.webp',
+  },
+]
+
+// Product design work from past roles.
+export const projects = [
   {
     name: 'Patient-Facing Healthcare App',
     org: 'Swasthya Lifescience',
@@ -119,7 +154,6 @@ export const projects = [
     blurb:
       'A mobile app and web portal that makes appointment booking and medical-record access effortless, built accessibility-first for elderly and diverse users.',
     tags: ['Mobile App', 'WCAG', 'Design System'],
-    accent: '#C6F24E',
   },
   {
     name: 'Clinical Data Dashboards',
@@ -128,7 +162,6 @@ export const projects = [
     blurb:
       'Data-dense internal dashboards for researchers and HCPs, taming complex medical data through clear information architecture and visualization.',
     tags: ['Data Viz', 'IA', 'Enterprise'],
-    accent: '#7DD3FC',
   },
   {
     name: 'B2B Ordering Platform Revamp',
@@ -137,7 +170,6 @@ export const projects = [
     blurb:
       'Reimagined search and checkout for a global FMCG ordering platform, backed by a 30+ component Figma library that kept design and code perfectly in sync.',
     tags: ['B2B', 'Component Library', 'CRO'],
-    accent: '#F0ABFC',
   },
   {
     name: 'Bigelow Benefits Optimization',
@@ -146,7 +178,6 @@ export const projects = [
     blurb:
       'Competitive analysis and customer-journey mapping to reduce e-commerce friction, with data-driven content strategies and KPI forecasts to lift visibility and conversion.',
     tags: ['UX Research', 'Journey Maps', 'Analytics'],
-    accent: '#FDBA74',
   },
 ]
 
