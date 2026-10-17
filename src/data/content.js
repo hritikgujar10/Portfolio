@@ -51,6 +51,18 @@ export const skills = [
 
 export const experience = [
   {
+    role: 'UI/UX Designer (Volunteer Intern)',
+    company: 'Community Dreams Foundation',
+    location: 'Remote, USA',
+    period: 'Jul 2026 – Present',
+    tag: 'Nonprofit',
+    points: [
+      'Create user-focused web and mobile experiences by developing user flows, wireframes, high-fidelity UI designs and interactive prototypes in Figma.',
+      'Perform UX research and usability testing to uncover user requirements, confirm design choices and enhance the overall user experience.',
+      'Work alongside product managers, developers and cross-functional teams in an Agile setting to deliver intuitive, user-centered solutions.',
+    ],
+  },
+  {
     role: 'UI/UX Product Designer',
     company: 'Swasthya Lifescience Pvt. Ltd.',
     location: 'Mumbai, India',
