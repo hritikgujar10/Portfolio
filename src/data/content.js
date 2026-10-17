@@ -51,7 +51,7 @@ export const skills = [
 
 export const experience = [
   {
-    role: 'UI/UX Designer (Volunteer Intern)',
+    role: 'UI/UX Designer',
     company: 'Community Dreams Foundation',
     location: 'Remote, USA',
     period: 'Jul 2026 – Present',
