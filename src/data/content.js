@@ -30,7 +30,7 @@ export const skills = [
   {
     title: 'AI Tools',
     icon: 'spark',
-    items: ['ChatGPT', 'Figma AI', 'Gemini', 'Claude', 'v0'],
+    items: ['ChatGPT', 'Figma AI', 'Gemini', 'v0'],
   },
   {
     title: 'UX Research & Design',
