@@ -35,6 +35,15 @@ export default function Navbar() {
           {links.map(([label, id]) => (
             <a key={id} href={`#${id}`} onClick={close}>{label}</a>
           ))}
+          <a
+            href="/Hritik-Gujar-Product-Designer-Resume.pdf"
+            className="nav-resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={close}
+          >
+            Resume
+          </a>
           <a href="#contact" className="nav-cta" onClick={close}>Get in touch</a>
         </div>
         <button

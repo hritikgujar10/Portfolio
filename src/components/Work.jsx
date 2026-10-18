@@ -17,13 +17,13 @@ export default function Work() {
         <div>
           <Reveal><span className="eyebrow">Selected Work</span></Reveal>
           <Reveal delay={0.05}>
-            <h2 className="section-title">Live websites, designed <em>and</em> shipped.</h2>
+            <h2 className="section-title">Live products, designed <em>and</em> built.</h2>
           </Reveal>
         </div>
         <Reveal delay={0.1}>
           <p className="section-lead">
-            Recent builds across travel, fintech, SaaS, fitness, healthcare and D2C e-commerce.
-            Every one is live, so click through and try it.
+            Client work and demo projects across healthcare, nonprofit, D2C, fintech, SaaS and
+            fitness. Every one is live, so click through and try it.
           </p>
         </Reveal>
       </div>
@@ -58,6 +58,7 @@ export default function Work() {
                   <span>{String(i + 1).padStart(2, '0')}</span>
                   <span>{p.category}</span>
                   <span>{p.year}</span>
+                  {p.kind && <em className="work-kind">{p.kind}</em>}
                 </div>
                 <h3>{p.name}</h3>
                 <p>{p.blurb}</p>

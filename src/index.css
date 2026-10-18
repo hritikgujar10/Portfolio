@@ -124,6 +124,11 @@ h1 em, h2 em {
   transition: color 0.2s, background 0.2s;
 }
 .nav-links a:hover { color: var(--text); background: rgba(255, 255, 255, 0.05); }
+.nav-links .nav-resume {
+  margin-left: 8px; font-weight: 500; color: var(--text);
+  border: 1px solid var(--border-strong); padding: 8px 18px;
+}
+.nav-links .nav-resume:hover { border-color: var(--text-dim); }
 .nav-links .nav-cta {
   margin-left: 8px; font-weight: 500;
   background: var(--text); color: var(--bg);
@@ -160,6 +165,7 @@ h1 em, h2 em {
   .nav.open .nav-links { opacity: 1; pointer-events: auto; transform: none; }
   .nav-links a { padding: 14px 4px; border-radius: 0; font-size: 1rem; border-bottom: 1px solid var(--border); }
   .nav-links a:hover { background: none; }
+  .nav-links .nav-resume { margin: 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; padding: 14px 4px; }
   .nav-links .nav-cta { margin: 14px 0 0; text-align: center; border-radius: 999px; padding: 13px; border: 0; }
 }
 
@@ -293,6 +299,11 @@ h1 em, h2 em {
 }
 .work-meta span + span::before { content: '·'; margin-right: 10px; }
 .work-meta span:first-child { color: var(--accent); font-variant-numeric: tabular-nums; }
+.work-kind {
+  font-style: normal; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.02em;
+  color: var(--accent); border: 1px solid rgba(212, 245, 107, 0.45);
+  padding: 2px 10px; border-radius: 999px; margin-left: 4px;
+}
 .work-info h3 { font-size: 1.6rem; margin-top: 10px; transition: color 0.3s; }
 .work-item.featured .work-info h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); }
 .work-info p { color: var(--text-dim); margin: 12px 0 20px; font-size: 0.98rem; max-width: 52ch; }
@@ -406,6 +417,12 @@ h1 em, h2 em {
   transition: color 0.25s, border-color 0.25s;
 }
 .contact-email:hover { color: var(--accent); border-color: var(--accent); }
+.contact-resume {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 22px;
+  font-size: 0.95rem; color: var(--text-dim); transition: color 0.25s;
+}
+.contact-resume svg { width: 16px; height: 16px; }
+.contact-resume:hover { color: var(--accent); }
 .socials { display: flex; gap: 12px; justify-content: center; margin-top: 40px; }
 .social-btn {
   display: grid; place-items: center; width: 48px; height: 48px;

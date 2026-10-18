@@ -26,9 +26,9 @@ export default function Hero() {
       </h1>
 
       <motion.p className="hero-sub" {...fade(0.55)}>
-        I'm <strong>{profile.name}</strong>, a UI/UX Product Designer with 3+ years turning
-        messy requirements into <strong>intuitive, accessible, data-rich</strong> experiences
-        across healthcare, B2B, e-commerce and analytics.
+        I'm <strong>{profile.name}</strong>, a UI/UX Product Designer with 3+ years of experience
+        turning complex requirements into <strong>intuitive, accessible, data-rich</strong> products
+        across healthcare, fintech, B2B and e-commerce.
       </motion.p>
 
       <motion.div className="hero-actions" {...fade(0.7)}>

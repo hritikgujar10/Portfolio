@@ -1,6 +1,6 @@
 import { profile } from '../data/content'
 import Reveal from './Reveal'
-import { Mail, LinkedIn, Github, Arrow } from './Icons'
+import { Mail, LinkedIn, Github, Arrow, Download } from './Icons'
 
 export default function Contact() {
   return (
@@ -17,6 +17,17 @@ export default function Contact() {
       </Reveal>
       <Reveal delay={0.15}>
         <a className="contact-email" href={`mailto:${profile.email}`}>{profile.email}</a>
+      </Reveal>
+      <Reveal delay={0.18}>
+        <a
+          className="contact-resume"
+          href="/Hritik-Gujar-Product-Designer-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          <Download /> Download resume (PDF)
+        </a>
       </Reveal>
       <Reveal delay={0.2}>
         <div className="socials">

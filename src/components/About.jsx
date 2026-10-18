@@ -9,16 +9,22 @@ export default function About() {
         <div className="about-body">
           <Reveal delay={0.05}>
             <p>
-              I own <strong>complete design processes in Figma</strong>, from research and user
-              flows to scalable design systems, while keeping a firm commitment to
-              accessibility standards (WCAG).
+              I own <strong>the full design process in Figma</strong>, from research and user
+              flows to scalable design systems, with a firm commitment to accessibility (WCAG).
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <p>
-              Backed by an <strong>MS in Digital Marketing</strong>, I blend UX strategy with
-              Conversion Rate Optimization to turn user-behavior insights into
-              measurable product growth.
+              With an <strong>MS in Digital Marketing</strong>, I pair UX strategy with
+              conversion-focused thinking, turning user-behavior insights into measurable
+              product outcomes.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <p>
+              I've designed for healthcare platforms, enterprise dashboards, a Fortune 500
+              ordering platform, and a nonprofit's volunteer platform, and I build and ship
+              my own work.
             </p>
           </Reveal>
           <Reveal delay={0.18}>

@@ -17,15 +17,15 @@ export const profile = {
 export const stats = [
   { value: '3+', label: 'Years designing products' },
   { value: '30+', label: 'Reusable UI components built' },
-  { value: 'WCAG', label: 'Accessibility-first mindset' },
-  { value: '6', label: 'Live websites shipped' },
+  { value: '3', label: 'Client projects shipped' },
+  { value: '6', label: 'Live projects built' },
 ]
 
 export const skills = [
   {
     title: 'Design Tools',
     icon: 'pen',
-    items: ['Figma Auto Layout', 'Component Libraries', 'Advanced Prototyping', 'Adobe XD', 'Photoshop', 'Illustrator'],
+    items: ['Figma Auto Layout', 'Component Libraries', 'Advanced Prototyping', 'Photoshop', 'Illustrator'],
   },
   {
     title: 'AI Tools',
@@ -113,6 +113,7 @@ export const work = [
       'A boutique-stays booking experience: an immersive search-first hero, filterable featured villas, and a bento of concierge chat, live weather and an Apple Wallet stay pass that sells the service by showing it.',
     tags: ['Booking UX', 'Bento UI', 'Light / Dark'],
     url: 'https://aura-stays-green.vercel.app/',
+    kind: 'Demo project',
     image: '/projects/aura-stays.webp',
   },
   {
@@ -123,6 +124,7 @@ export const work = [
       'A storefront for a high-protein oats and peanut butter brand, with quick-add product cards, bundles, nutrition breakdowns and social proof designed to drive conversion.',
     tags: ['E-commerce', 'CRO', 'Branding'],
     url: 'https://craft-fuel.vercel.app/',
+    kind: 'Client project',
     image: '/projects/craft-fuel.webp',
   },
   {
@@ -133,6 +135,7 @@ export const work = [
       'Landing page for an AI meeting-notes app, built around a live-transcript phone mockup and interactive summary, action-item and transcript tabs.',
     tags: ['SaaS', 'AI Product', 'Interaction'],
     url: 'https://nimbus-notes-sigma.vercel.app/',
+    kind: 'Demo project',
     image: '/projects/nimbus.webp',
   },
   {
@@ -143,6 +146,7 @@ export const work = [
       'A calm, trust-building site for a physiotherapy clinic: scannable conditions and treatments, practitioner credentials up front and a clear path to book.',
     tags: ['Healthcare', 'Local Business', 'Accessibility'],
     url: 'https://viva-physio-clinic.vercel.app/',
+    kind: 'Client project',
     image: '/projects/viva-physio.webp',
   },
   {
@@ -153,16 +157,18 @@ export const work = [
       'A boutique fitness studio with a bookable weekly schedule, class filters, coach profiles and membership pricing, in an Apple Fitness-inspired visual language.',
     tags: ['Scheduling', 'Pricing', 'Mobile-first'],
     url: 'https://pulse-studio-orpin.vercel.app/',
+    kind: 'Demo project',
     image: '/projects/pulse-studio.webp',
   },
   {
     name: 'Artha',
-    category: 'Fintech · Personal finance app',
+    category: 'Fintech · Web app',
     year: '2026',
     blurb:
-      'A private personal-finance app that puts your money in a global context: one dashboard for net worth, budgets with a daily pace line, savings goals and a multi-asset portfolio, alongside live currency, crypto and gold rates.',
-    tags: ['Fintech', 'Dashboard', 'Data Viz'],
+      'A personal finance and investing workspace that brings budgets, goals, a multi-asset portfolio and live market data into one calm view. Charts are accessible by default, with a table view for every chart.',
+    tags: ['Fintech', 'Data Viz', 'Accessibility'],
     url: 'https://artha-finance-woad.vercel.app/',
+    kind: 'Demo project',
     image: '/projects/artha-finance.webp',
   },
 ]
