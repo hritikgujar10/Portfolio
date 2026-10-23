@@ -18,7 +18,7 @@ export const stats = [
   { value: '3+', label: 'Years designing products' },
   { value: '30+', label: 'Reusable UI components built' },
   { value: '3', label: 'Client projects shipped' },
-  { value: '6', label: 'Live projects built' },
+  { value: '7', label: 'Live projects built' },
 ]
 
 export const skills = [
@@ -105,6 +105,17 @@ export const experience = [
 
 // Live websites, shown with a homepage thumbnail from /public/projects.
 export const work = [
+  {
+    name: 'Gujar & Sons Cashews',
+    category: 'D2C E-commerce · 3D',
+    year: '2026',
+    blurb:
+      'An editorial storefront for a family-owned cashew brand from the Konkan. A real-time 3D cashew travels through the farm-to-pack story as you scroll, every product has a drag-to-rotate 3D pack, and the cart runs through to a validated demo checkout.',
+    tags: ['3D / WebGL', 'E-commerce', 'Motion'],
+    url: 'https://gujar-sons-cashews.vercel.app/',
+    kind: 'Demo project',
+    image: '/projects/gujar-sons-cashews.webp',
+  },
   {
     name: 'Aura Stays',
     category: 'Travel · Booking platform',
