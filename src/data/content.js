@@ -18,7 +18,7 @@ export const stats = [
   { value: '3+', label: 'Years designing products' },
   { value: '30+', label: 'Reusable UI components built' },
   { value: '3', label: 'Client projects shipped' },
-  { value: '7', label: 'Live projects built' },
+  { value: '8', label: 'Live projects built' },
 ]
 
 export const skills = [
