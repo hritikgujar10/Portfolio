@@ -156,6 +156,11 @@
   .tagline { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; font-size: .8rem; color: var(--muted); }
   .brand-mark { display: inline-flex; align-items: center; height: 30px; padding: 5px 10px; border-radius: 8px; background: #fff; box-shadow: 0 4px 14px -6px rgba(0,0,0,.6); }
   .brand-mark img { display: block; height: 100%; width: auto; }
+  .brand-ga { padding: 0; background: none; overflow: hidden; border-radius: 8px; height: 34px; }
+  .shot-win { margin: 0 0 18px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line-strong); background: #0b0b0b; box-shadow: 0 30px 70px -30px rgba(0,0,0,.9); }
+  .shot-win img { display: block; width: 100%; height: auto; }
+  .shot-win figcaption { padding: 10px 14px; font-size: .8rem; color: var(--muted); border-top: 1px solid var(--line); }
+  .simple .shot-win { display: none; }
   .brand-cdf { gap: 7px; }
   .brand-cdf span { font-family: Georgia, 'Times New Roman', serif; font-size: .82rem; color: #1b1b1b; white-space: nowrap; }
   .pill { font-size: .72rem; font-weight: 600; padding: 4px 11px; border-radius: 999px; color: var(--accent); background: var(--accent-soft); border: 1px solid rgba(138,180,255,.3); }
@@ -353,6 +358,8 @@
   .b-row { position: relative; }
   .b-row b { position: absolute; right: 0; top: 0; font-size: .82rem; color: var(--text); }
   .stats .box b { font-size: 1.5rem; letter-spacing: -0.02em; background: var(--cosmic); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .affil-note { margin: -6px 0 12px; font-size: .74rem; color: var(--muted); }
+  .problem-line { font-size: 1.25rem; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em; }
   .src { margin-top: 12px; font-size: .76rem; color: var(--muted); }
   .months { list-style: none; display: grid; gap: 12px; counter-reset: m; }
   .months li { position: relative; padding-left: 22px; color: var(--soft); font-size: .93rem; }
@@ -453,6 +460,7 @@
   .contact-list dd { font-size: .95rem; }
   .contact-list a:hover { color: var(--accent); }
   .site-foot { padding: 0 0 36px; text-align: center; color: var(--muted); font-size: .82rem; }
+  .tm-note { display: block; margin: 8px auto 0; max-width: 92%; font-size: .7rem; color: rgba(255,255,255,.35); }
 
   /* ---------- Responsive ---------- */
   @media (max-width: 1440px) { .funnel-nav .label { display: none; } .funnel-nav { right: 14px; } }
@@ -600,14 +608,14 @@
   </div>
 </section>
 
-<!-- A) Gujar & Sons Cashews: concept campaign -->
+<!-- A) Gujar & Sons Cashews: Instagram for the family brand -->
 <section class="case" id="gujar" data-z="-46" data-stage="awareness" data-nav-group="awareness">
   <div class="container gs-wrap">
     <div class="case-grid">
       <article class="panel reveal">
-        <div class="tagline"><span class="pill">Concept campaign</span>Instagram · 2026</div>
+        <div class="tagline"><span class="pill">Family business</span>Instagram · 2025</div>
         <h2>Social Media Campaign: Gujar &amp; Sons <span class="serif">Cashews</span></h2>
-        <p class="one-liner">A 7-week Instagram campaign for a family-owned cashew brand from the Konkan: 3 posts a week, 21 posts in all.</p>
+        <p class="one-liner">A 7-week Instagram launch for my family's cashew brand from the Konkan: 3 posts a week, 21 posts in all.</p>
         <dl class="meta">
           <div><dt>Role</dt><dd>Strategy, content &amp; design</dd></div>
           <div><dt>Focus</dt><dd>Brand storytelling</dd></div>
@@ -617,8 +625,6 @@
         <p class="body">Introduce a new, family-run cashew brand from Shrivardhan to Instagram and build an early following that trusts where its snacks come from, ahead of the online store launch.</p>
         <div class="h-label">Target audience</div>
         <p class="body">Health-conscious urban snackers aged 22–40 in Mumbai and Pune who buy premium dry fruit online, plus festive-season gift buyers.</p>
-        <div class="h-label">Starting point</div>
-        <p class="body">The brand already posts on Instagram. This campaign plans 7 weeks of content, 3 posts a week, built on that existing feed and its look.</p>
         <div class="chips"><span class="chip">Social strategy</span><span class="chip">Content</span><span class="chip">Design</span></div>
       </article>
       <div class="visual phone-stage">
@@ -633,7 +639,7 @@
               <div class="ig-grid" id="ig-grid"></div>
             </div>
           </div>
-          <p class="visual-note">The brand’s existing feed, @gujar_andsons.cashews. Hover a post to read its caption.</p>
+          <p class="visual-note">Posts from @gujar_andsons.cashews. Hover a post to read its caption.</p>
         </div>
       </div>
     </div>
@@ -648,18 +654,18 @@
         </div>
       </div>
       <div class="panel reveal span2">
-        <div class="h-label" style="margin-top:0">7-week content calendar (concept)</div>
+        <div class="h-label" style="margin-top:0">7-week content calendar</div>
         <div class="cal" id="cal"></div>
       </div>
       <div class="panel reveal">
-        <div class="h-label" style="margin-top:0">Caption examples from the existing feed</div>
+        <div class="h-label" style="margin-top:0">Caption examples</div>
         <p class="caption">Introducing the name that stands for purity, taste, and tradition. Welcome to Gujar &amp; Son's, where every cashew tells a story.</p>
         <p class="caption">Big dreams grow under sunny skies! From our cashew farms in Konkan to your home.</p>
         <div class="h-label">Hashtags used on the feed</div>
         <div class="hashtags"><span>#GujarAndSons</span><span>#FreshFromKonkan</span><span>#TasteOfNature</span><span>#TasteWithTrust</span><span>#OrganicCashew</span><span>#HealthyHeart</span><span>#SnackSmart</span><span>#CashewLove</span></div>
       </div>
       <div class="panel reveal">
-        <div class="h-label" style="margin-top:0">Reels idea (concept)</div>
+        <div class="h-label" style="margin-top:0">Reels idea</div>
         <p class="body"><strong>"Farm to pack in 30 seconds."</strong> A POV reel that follows one cashew from the tree to the pouch: picking, sun-drying, sorting and sealing, with on-screen text for each step and a close-up crunch at the end. It closes on the four flavours and a launch-week offer, and doubles as the pinned post.</p>
       </div>
     </div>
@@ -744,9 +750,9 @@
 <section class="case" id="swasthya" data-z="-136" data-stage="consideration" data-nav-group="consideration">
   <div class="container case-grid">
     <article class="panel reveal">
-      <div class="tagline"><span class="pill">Marketing</span>E-commerce · 2023–2024</div>
+      <div class="tagline"><span class="brand-mark brand-ga"><img src="images/swasthya/generic-aadhaar-logo.png" alt="Generic Aadhaar" width="160" height="160"></span><span class="pill">Marketing</span>E-commerce · 2023–2024</div>
       <h2>E-commerce at <span class="serif">Swasthya</span> Lifescience</h2>
-      <p class="one-liner">Managing online sales for a healthcare and wellness brand's website.</p>
+      <p class="one-liner">Managing online sales for a healthcare and wellness company that operates Generic Aadhaar pharmacy stores.</p>
       <dl class="meta">
         <div><dt>Role</dt><dd>E-commerce Specialist</dd></div>
         <div><dt>Timeline</dt><dd>Feb 2023 – Jul 2024</dd></div>
@@ -763,6 +769,11 @@
       <div class="chips"><span class="chip">E-commerce</span><span class="chip">Reporting</span><span class="chip">Social content</span></div>
     </article>
     <div class="visual">
+      <figure class="shot-win">
+        <div class="win-bar"><i></i><i></i><i></i><span class="url">Generic Aadhaar · Swasthya Lifescience</span></div>
+        <img src="images/swasthya/generic-aadhaar-store.webp" alt="Generic Aadhaar pharmacy store front" width="750" height="400" loading="lazy" decoding="async">
+        <figcaption>Generic Aadhaar store, operated by Swasthya Lifescience</figcaption>
+      </figure>
       <div class="iso-room" id="iso-room" aria-hidden="true">
         <div class="iso-tilt" id="iso-tilt"><div class="iso-stage"><div class="iso-spin" id="iso-spin"></div></div></div>
         <div class="iso-ticket"><i></i><div><b>Order packed</b><span>Out for delivery</span></div></div>
@@ -777,76 +788,66 @@
   <div class="container gs-wrap">
     <div class="case-grid">
       <article class="panel reveal">
-        <div class="tagline"><span class="brand-mark"><img src="images/brands/bigelow.png" alt="Bigelow" height="96"></span><span class="pill">Capstone project</span>MS in Digital Marketing · Sacred Heart University</div>
-        <h2>Reigniting Growth for <span class="serif">Bigelow Benefits</span></h2>
+        <div class="tagline"><span class="brand-mark"><img src="images/brands/bigelow.png" alt="Bigelow" height="96"></span><span class="pill">Capstone project</span>MS, Sacred Heart</div>
+        <p class="affil-note">Academic project, not affiliated with Bigelow Tea</p>
+        <h2>Reigniting growth for <span class="serif">Bigelow Benefits</span></h2>
         <p class="one-liner">A 12-month, $50K plan to reposition Bigelow's Benefits wellness teas as the taste-first wellness tea for Gen-Z.</p>
         <dl class="meta">
           <div><dt>Team</dt><dd>Group project</dd></div>
           <div><dt>Focus</dt><dd>Positioning, social &amp; Amazon growth</dd></div>
-          <div><dt>Tools</dt><dd>RivalIQ, Excel, Meta &amp; TikTok Ads (plan)</dd></div>
         </dl>
-        <div class="h-label">The challenge</div>
-        <p class="body">The Benefits line had no clearly defined target segment, which led to low awareness and weak brand positioning. Gen-Z doesn't think of tea as a wellness tool, and competitors lead with wellness, leaving taste untapped.</p>
-        <div class="h-label">My part</div>
+        <div class="h-label">What I did</div>
         <ul class="dash lightable">
-          <li>Conducted market research and competitive analysis to determine strategies for content and product positioning</li>
-          <li>Examined structured datasets to reveal trends in customer behavior and insights on segmentation</li>
-          <li>Assessed product content, metadata and the user journey to pinpoint areas for optimization</li>
-          <li>Designed customer journey maps and KPI forecasts to support the growth plan</li>
+          <li>Worked in a 4-person team to analyze the brand's social, TikTok, and Amazon performance against competitors</li>
+          <li>Helped shape the Gen-Z positioning and the "Sips Don't Lie" campaign idea</li>
+          <li>Co-built the $50K budget, influencer plan, and 12-month rollout</li>
         </ul>
-        <div class="chips"><span class="chip">Brand strategy</span><span class="chip">Social media</span><span class="chip">Amazon SEO</span><span class="chip">Influencers</span></div>
+        <div class="chips"><span class="chip">Brand strategy</span><span class="chip">Social media</span><span class="chip">TikTok Shop</span><span class="chip">Amazon SEO</span><span class="chip">Influencers</span></div>
       </article>
       <div class="visual">
+        <div class="bigidea reveal">
+          <div class="h-label" style="margin-top:0">The problem</div>
+          <p class="problem-line">Sales down 30% and distribution down 14%, with no clear target segment and weak brand positioning.</p>
+        </div>
         <div class="bigidea reveal">
           <div class="h-label" style="margin-top:0">The big idea</div>
           <p class="bigidea-line">&ldquo;Sips Don&rsquo;t Lie.&rdquo;</p>
           <p class="body">Benefits for the taste-first wellness generation.</p>
-        </div>
-        <div class="budget reveal" aria-label="Budget breakdown, $50,000 total">
-          <div class="h-label">Budget breakdown · $50,000</div>
-          <div class="b-row"><span>Influencer partnerships</span><i style="--w:40%"></i><b>$20K · 40%</b></div>
-          <div class="b-row"><span>TikTok Ads</span><i style="--w:24%"></i><b>$12K · 24%</b></div>
-          <div class="b-row"><span>Social media mgmt &amp; analytics</span><i style="--w:20%"></i><b>$10K · 20%</b></div>
-          <div class="b-row"><span>Instagram Reels</span><i style="--w:16%"></i><b>$8K · 16%</b></div>
         </div>
       </div>
     </div>
 
     <div class="gs-details">
       <div class="panel reveal span2">
-        <div class="h-label" style="margin-top:0">Where we can win</div>
-        <div class="pillars stats">
-          <div class="box"><b>0.3% vs 1.4%</b><span>Instagram engagement versus the category average</span></div>
-          <div class="box"><b>No TikTok</b><span>while competitors grew +600% on TikTok with storytelling</span></div>
-          <div class="box"><b>15–20%</b><span>revenue lift brands see from TikTok Shop, with weak Amazon visibility today</span></div>
+        <div class="h-label" style="margin-top:0">Strategy</div>
+        <div class="pillars">
+          <div class="box"><b>1. Flavor-first storytelling</b><span>On TikTok and Instagram Reels.</span></div>
+          <div class="box"><b>2. Social proof</b><span>Through authentic wellness influencers.</span></div>
+          <div class="box"><b>3. Discovery to sales</b><span>Convert discovery into sales via TikTok Shop and Amazon SEO.</span></div>
         </div>
-        <p class="src">Sources: RivalIQ competitive analysis, WSJ, Appeal Wizards</p>
       </div>
       <div class="panel reveal span2">
-        <div class="h-label" style="margin-top:0">The strategy: from sip to sale</div>
-        <div class="pillars">
-          <div class="box"><b>1. Flavor-first storytelling</b><span>Reels and TikTok built on taste, seasonality, tea as a caffeine replacement and wellness rituals.</span></div>
-          <div class="box"><b>2. Social proof</b><span>Two lifestyle and wellness creators known for authentic self-care and &ldquo;day in my life&rdquo; content.</span></div>
-          <div class="box"><b>3. Visibility &amp; conversion</b><span>TikTok Shop for first sales, shoppable IG and Meta ads, then Amazon to capture the demand.</span></div>
+        <div class="pillars stats">
+          <div class="box"><b>0.3% vs 1.4%</b><span>Instagram engagement vs category average</span></div>
+          <div class="box"><b>+600%</b><span>competitor growth on TikTok</span></div>
+          <div class="box"><b>15–20%</b><span>revenue lift from TikTok Shop</span></div>
         </div>
+        <p class="src">Research findings. Sources: RivalIQ, WSJ, Appeal Wizards, JungleScout.</p>
+      </div>
+      <div class="budget reveal" aria-label="Budget breakdown, $50,000 total">
+        <div class="h-label">Budget breakdown · $50,000</div>
+        <div class="b-row"><span>Influencer partnerships</span><i style="--w:40%"></i><b>$20K · 40%</b></div>
+        <div class="b-row"><span>TikTok Ads</span><i style="--w:24%"></i><b>$12K · 24%</b></div>
+        <div class="b-row"><span>Social media mgmt &amp; analytics</span><i style="--w:20%"></i><b>$10K · 20%</b></div>
+        <div class="b-row"><span>Instagram Reels</span><i style="--w:16%"></i><b>$8K · 16%</b></div>
       </div>
       <div class="panel reveal">
-        <div class="h-label" style="margin-top:0">Owning the Amazon search results</div>
-        <ul class="dash">
-          <li>Target high-search, low-competition keywords</li>
-          <li>Update A+ content to match Gen-Z wellness trends</li>
-          <li>Encourage verified reviews to build trust and ranking</li>
-          <li>Track CTR, add-to-cart rate and sales uplift</li>
-        </ul>
-        <p class="src">Top 3 listings receive 60% of clicks (JungleScout).</p>
-      </div>
-      <div class="panel reveal">
-        <div class="h-label" style="margin-top:0">Timeline to long-term growth</div>
+        <div class="h-label" style="margin-top:0">12-month timeline</div>
         <ol class="months">
-          <li><b>Months 1–2</b>Launch flavor-led, seasonal TikTok and Reels content; Prime influencer launch</li>
-          <li><b>Months 3–5</b>Begin influencer partnerships to strengthen credibility</li>
-          <li><b>Months 6–8</b>Strengthen TikTok Shop visibility through promotions</li>
-          <li><b>Months 9–12</b>Evaluate campaign performance and use the insights to keep growing</li>
+          <li><b>Months 1–2</b>Launch TikTok and Reels</li>
+          <li><b>Months 3–5</b>Influencer partnerships</li>
+          <li><b>Months 6–8</b>TikTok Shop promotions</li>
+          <li><b>Months 9–12</b>Prime influencer launch and performance review</li>
         </ol>
       </div>
     </div>
@@ -876,7 +877,7 @@
       </div>
       <div class="side-col">
         <div class="proj-head reveal">
-          <div class="tagline"><span class="pill">Client project</span>D2C e-commerce · 2026</div>
+          <div class="tagline"><span class="pill">Client</span>D2C e-commerce · 2026</div>
           <h3>Craft <span class="serif">Fuel</span></h3>
           <p class="one-liner">A storefront for a high-protein oats and peanut butter brand.</p>
           <div class="open-btn"><button class="text-btn" data-open="craftfuel">Open case study →</button><a class="ext" href="https://craft-fuel.vercel.app" target="_blank" rel="noopener">Visit site ↗</a></div>
@@ -911,7 +912,7 @@
       <div class="side-col">
         <div class="extra-anchor" data-extra="cashew" aria-hidden="true"></div>
         <div class="proj-head reveal">
-          <div class="tagline"><span class="pill">Demo project</span>D2C e-commerce · 3D · 2026</div>
+          <div class="tagline"><span class="pill">Family business</span>D2C e-commerce · 3D · 2026</div>
           <h3>Gujar &amp; Sons <span class="serif">Cashews</span></h3>
           <p class="one-liner">An editorial storefront for a family-owned cashew brand from the Konkan. It started as a Figma design in my MS Web Design course, and I built it for real.</p>
           <div class="open-btn"><button class="text-btn" data-open="gujar-site">Open case study →</button><a class="ext" href="https://gujar-sons-cashews.vercel.app" target="_blank" rel="noopener">Visit site ↗</a></div>
@@ -950,7 +951,7 @@
       </div>
       <div class="side-col">
         <div class="proj-head reveal">
-          <div class="tagline"><span class="brand-mark brand-cdf"><img src="images/brands/community-dreams-mark.png" alt="" width="96" height="96"><span>Community Dreams Foundation</span></span><span class="pill">Volunteer project</span>Nonprofit · Web &amp; mobile</div>
+          <div class="tagline"><span class="brand-mark brand-cdf"><img src="images/brands/community-dreams-mark.png" alt="" width="96" height="96"><span>Community Dreams Foundation</span></span><span class="pill">Volunteer</span>Nonprofit · Web &amp; mobile</div>
           <h3><span class="serif">Dreamstream</span></h3>
           <p class="one-liner">The volunteer and program-management platform of Community Dreams Foundation.</p>
           <div class="open-btn"><button class="text-btn" data-open="dreamstream">Open case study →</button><a class="ext" href="https://cdreamstream.org" target="_blank" rel="noopener">Visit site ↗</a></div>
@@ -958,7 +959,7 @@
       </div>
       <div class="detail">
         <dl class="meta">
-          <div><dt>Role</dt><dd>UI/UX Designer (Volunteer)</dd></div>
+          <div><dt>Role</dt><dd>UI/UX Designer Intern (Volunteer)</dd></div>
           <div><dt>Timeline</dt><dd>Jul 2026 – Present</dd></div>
           <div><dt>Users</dt><dd>Volunteers, interns, program leaders</dd></div>
           <div><dt>Tools</dt><dd>Figma</dd></div>
@@ -985,7 +986,7 @@
       <div class="side-col">
         <div class="extra-anchor artha-globe" id="artha-globe" aria-hidden="true"></div>
         <div class="proj-head reveal">
-          <div class="tagline"><span class="pill">Demo project</span>Fintech · Web app · 2026</div>
+          <div class="tagline"><span class="pill">Demo</span>Fintech · Web app · 2026</div>
           <h3><span class="serif">Artha</span></h3>
           <p class="one-liner">A personal finance and investing workspace bringing budgets, goals, a multi-asset portfolio, and live market data into one calm view.</p>
           <div class="open-btn"><button class="text-btn" data-open="artha">Open case study →</button><a class="ext" href="https://artha-finance-woad.vercel.app" target="_blank" rel="noopener">Visit site ↗</a></div>
@@ -1039,8 +1040,8 @@
     <div class="timeline" id="timeline">
       <span class="tl-track"><span class="tl-fill" id="tl-fill"></span></span>
       <div class="tl-item">
-        <div class="tl-head"><h3>UI/UX Designer</h3><span class="tl-date">Jul 2026 – Present</span></div>
-        <div class="tl-org">Community Dreams Foundation · Volunteer · Remote, USA</div>
+        <div class="tl-head"><h3>UI/UX Designer Intern (Volunteer)</h3><span class="tl-date">Jul 2026 – Present</span></div>
+        <div class="tl-org">Community Dreams Foundation · Remote, USA</div>
         <ul class="dash tl-points">
           <li>Designed web and mobile interfaces for Dreamstream, the volunteer and program-management platform of Community Dreams Foundation, creating user flows, wireframes, and high-fidelity prototypes in Figma</li>
           <li>Delivered consistent, responsive page designs across web and mobile, supporting onboarding and program management for volunteers, interns, and program leaders</li>
@@ -1108,13 +1109,13 @@
         <h3>Skills, proven</h3>
         <p class="proof-hint" id="proof-hint">Hover a skill to see the work that proves it.</p>
         <ul>
-          <li><a href="#gujar" data-case="gujar">Gujar &amp; Sons Instagram campaign <span>Concept</span></a></li>
+          <li><a href="#gujar" data-case="gujar">Gujar &amp; Sons Instagram <span>Family business</span></a></li>
           <li><a href="#amul" data-case="amul">Field marketing at Amul India <span>Marketing</span></a></li>
           <li><a href="#wish" data-case="wish">Google Ads for Wish.com <span>Marketing</span></a></li>
           <li><a href="#swasthya" data-case="swasthya">E-commerce at Swasthya Lifescience <span>Marketing</span></a></li>
-          <li><a href="#bigelow" data-case="bigelow">Bigelow Benefits capstone <span>Capstone</span></a></li>
+          <li><a href="#bigelow" data-case="bigelow">Bigelow Benefits capstone <span>Capstone project</span></a></li>
           <li><a href="#craftfuel" data-case="craftfuel">Craft Fuel <span>Client</span></a></li>
-          <li><a href="#gujar-site" data-case="gujar-site">Gujar &amp; Sons storefront <span>Demo</span></a></li>
+          <li><a href="#gujar-site" data-case="gujar-site">Gujar &amp; Sons storefront <span>Family business</span></a></li>
           <li><a href="#dreamstream" data-case="dreamstream">Dreamstream <span>Volunteer</span></a></li>
           <li><a href="#artha" data-case="artha">Artha <span>Demo</span></a></li>
         </ul>
@@ -1158,7 +1159,7 @@
 </section>
 
 </main>
-<footer class="site-foot">© <span id="year"></span> Hritik Gujar · Digital Marketer &amp; Designer</footer>
+<footer class="site-foot">© <span id="year"></span> Hritik Gujar · Digital Marketer &amp; Designer<small class="tm-note">Company names and logos are trademarks of their respective owners, used only to identify past roles.</small></footer>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
   <div class="modal-panel">
