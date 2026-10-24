@@ -13,9 +13,10 @@ Live: https://hritik-gujar.vercel.app
 
 ## Run locally
 
-```bash
-npm install
-npm run dev
-```
+No build step: open `index.html` in a browser. Images, certificates and `Hritik-Gujar-Portfolio.pdf` sit next to it.
 
-`npm run build` writes the site to `dist/`. Images and certificate PDFs live in `public/`.
+`pdf/portfolio-deck.html` is the source of the portfolio PDF (print it to PDF at 1456 × 819). It is kept in the repo but not deployed (see `.vercelignore`).
+
+## Deploy
+
+Pushing to `main` deploys to Vercel as a static site (`vercel.json`: no install or build, served from the root).
