@@ -1,6 +1,2 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-})
+// Single-page static site: index.html at the root, images and certificates in public/.
+export default {}
