@@ -466,6 +466,7 @@
   /* ---------- Responsive ---------- */
   @media (max-width: 1440px) { .funnel-nav .label { display: none; } .funnel-nav { right: 14px; } }
   @media (max-width: 1180px) { .mini-nav a { padding: 7px 10px; } }
+  @media (max-width: 1080px) { .mini-nav { display: none; } }
   @media (max-width: 1020px) {
     .mini-nav { display: none; }
     .case-grid, .gs-details, .project, .project.flip, .skills-wrap { grid-template-columns: 1fr; }
@@ -566,8 +567,7 @@
         <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M23 9l-6 6M17 9l6 6"/></svg>
         <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>
       </button>
-      <!-- Put your resume PDF next to this file as "Hritik-Gujar-Resume.pdf" -->
-      <a href="Hritik-Gujar-Resume.pdf" download class="pill-btn">Resume</a>
+      <a href="Hritik-Gujar-Portfolio.pdf" download class="pill-btn">Download Portfolio PDF</a>
     </div>
   </div>
 </header>
@@ -593,7 +593,7 @@
   <div class="hero-ctas intro">
     <a href="#awareness" class="btn btn-accent">View Work
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
-    <a href="Hritik-Gujar-Resume.pdf" download class="btn btn-ghost">Download Resume</a>
+    <a href="Hritik-Gujar-Portfolio.pdf" download class="btn btn-ghost">Download Portfolio PDF</a>
     <a href="#contact" class="btn btn-ghost">Contact</a>
   </div>
   <div class="scroll-cue intro"><span>Scroll to launch into the funnel</span><i></i></div>
@@ -1145,7 +1145,7 @@
       <p class="lead">I'm currently open to Digital Marketing and Social Media roles, and always happy to discuss new opportunities and collaborations.</p>
       <div class="contact-ctas">
         <a href="mailto:hritikgujar10@gmail.com" class="btn btn-accent magnetic">Let's Work Together</a>
-        <a href="Hritik-Gujar-Resume.pdf" download class="btn btn-ghost">Download Resume</a>
+        <a href="Hritik-Gujar-Portfolio.pdf" download class="btn btn-ghost">Download Portfolio PDF</a>
         <a href="https://www.linkedin.com/in/hritikgujar" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
       </div>
       <dl class="contact-list">
@@ -1176,6 +1176,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="images/gujar/phone-atlas.js"></script>
 <script>
 (function () {
   'use strict';
@@ -1189,7 +1190,6 @@
   // Heavy WebGL only on larger, pointer-driven screens; phones and reduced motion get the light 2D canvas
   var MODE = SIMPLE ? 'simple' : (reduceMotion || window.innerWidth < 900 || !finePointer) ? '2d' : '3d';
   root.classList.add('mode-' + MODE);
-  var ACCENT = '#8ab4ff';
   var shared = { phonesFocus: 0, pull: 0 };
 
   /* =================== Generated content =================== */
@@ -1719,8 +1719,13 @@
       parts = [];
       for (var n = 0; n < N; n++) {
         var o = old[n], hx = ox + pts[n][0], hy = oy + pts[n][1];
-        parts.push({ x: o ? o.x : (reduceMotion ? hx : Math.random() * W), y: o ? o.y : (reduceMotion ? hy : Math.random() * H), vx: 0, vy: 0, hx: hx, hy: hy, tint: Math.random() < 0.18 });
+        parts.push({ x: o ? o.x : (reduceMotion ? hx : Math.random() * W), y: o ? o.y : (reduceMotion ? hy : Math.random() * H), vx: 0, vy: 0, hx: hx, hy: hy, c: Math.random() < 0.12 ? '#ffffff' : nameColor(pts[n][0] / c.width) });
       }
+    }
+    // The brand gradient across the name: blue → violet → pink
+    function nameColor(u) {
+      var a = u < 0.55 ? [138, 180, 255] : [183, 148, 255], b = u < 0.55 ? [183, 148, 255] : [240, 171, 252], t = u < 0.55 ? u / 0.55 : (u - 0.55) / 0.45;
+      return 'rgb(' + Math.round(a[0] + (b[0] - a[0]) * t) + ',' + Math.round(a[1] + (b[1] - a[1]) * t) + ',' + Math.round(a[2] + (b[2] - a[2]) * t) + ')';
     }
     function resize2D() {
       DPR = Math.min(window.devicePixelRatio || 1, 1.5); W = window.innerWidth; H = window.innerHeight;
@@ -1821,8 +1826,7 @@
           p.vx *= 0.84; p.vy *= 0.84; p.x += p.vx; p.y += p.vy;
         });
         g.globalAlpha = fade;
-        g.fillStyle = '#ffffff'; parts.forEach(function (p) { if (!p.tint) g.fillRect(p.x, p.y, 1.8, 1.8); });
-        g.fillStyle = ACCENT; parts.forEach(function (p) { if (p.tint) g.fillRect(p.x, p.y, 1.8, 1.8); });
+        parts.forEach(function (p) { g.fillStyle = p.c; g.fillRect(p.x, p.y, 2, 2); });
         g.globalAlpha = 1;
       }
     }
@@ -2043,15 +2047,15 @@
     }
 
     // ---- Hero: particles that form the name ----
-    var TEXT_N = 3400;
+    var TEXT_N = 5200;
     var tPos = new Float32Array(TEXT_N * 3), tVel = new Float32Array(TEXT_N * 3), tHome = new Float32Array(TEXT_N * 3), tCol = new Float32Array(TEXT_N * 3);
     for (var i = 0; i < TEXT_N; i++) { tPos[i * 3] = (Math.random() - 0.5) * 80; tPos[i * 3 + 1] = (Math.random() - 0.5) * 50; tPos[i * 3 + 2] = (Math.random() - 0.5) * 40; }
     var textGeo = new THREE.BufferGeometry();
     textGeo.setAttribute('position', new THREE.BufferAttribute(tPos, 3));
     textGeo.setAttribute('color', new THREE.BufferAttribute(tCol, 3));
-    var textPoints = new THREE.Points(textGeo, new THREE.PointsMaterial(Object.assign({ size: 0.24, map: dotTex, vertexColors: true, opacity: 1 }, additive)));
+    var textPoints = new THREE.Points(textGeo, new THREE.PointsMaterial(Object.assign({ size: 0.42, map: dotTex, vertexColors: true, opacity: 1, fog: false }, additive)));
     scene.add(textPoints);
-    var textReady = false, C_VIOLET = new THREE.Color(0xb794ff);
+    var textReady = false, C_VIOLET = new THREE.Color(0xb794ff), C_PINK = new THREE.Color(0xf0abfc);
     function sampleName() {
       var aspect = window.innerWidth / window.innerHeight, twoLines = aspect < 1.05;
       var lines = twoLines ? ['HRITIK', 'GUJAR'] : ['HRITIK GUJAR'];
@@ -2061,7 +2065,7 @@
       g.fillStyle = '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.font = '800 200px Inter, Arial, sans-serif';
       lines.forEach(function (l, k) { g.fillText(l, cw / 2, 20 + lh * (k + 0.5)); });
       var data = g.getImageData(0, 0, cw, ch).data, pts = [], minX = cw, maxX = 0;
-      for (var y = 0; y < ch; y += 5) for (var x = 0; x < cw; x += 5) if (data[(y * cw + x) * 4 + 3] > 140) { pts.push([x, y]); if (x < minX) minX = x; if (x > maxX) maxX = x; }
+      for (var y = 0; y < ch; y += 4) for (var x = 0; x < cw; x += 4) if (data[(y * cw + x) * 4 + 3] > 140) { pts.push([x, y]); if (x < minX) minX = x; if (x > maxX) maxX = x; }
       if (!pts.length) return;
       var visH = 2 * 34 * Math.tan(THREE.MathUtils.degToRad(25)), visW = visH * aspect;
       var worldW = Math.min(30, visW * 0.84), scale = worldW / (maxX - minX), midX = (minX + maxX) / 2, yOff = visH * (twoLines ? 0.23 : 0.15);
@@ -2071,8 +2075,9 @@
         tHome[n * 3] = (pt[0] - midX) * scale + (Math.random() - 0.5) * 0.06;
         tHome[n * 3 + 1] = -(pt[1] - ch / 2) * scale + yOff;
         tHome[n * 3 + 2] = (Math.random() - 0.5) * 0.6;
-        // Starlight white, with a sweep from blue to violet across the name
-        var col = Math.random() < 0.7 ? C_WHITE : C_ACCENT.clone().lerp(C_VIOLET, (pt[0] - minX) / (maxX - minX));
+        // The brand gradient (blue → violet → pink) sweeps across the name, with a few white sparkles
+        var u = (pt[0] - minX) / (maxX - minX);
+        var col = Math.random() < 0.12 ? C_WHITE : u < 0.55 ? C_ACCENT.clone().lerp(C_VIOLET, u / 0.55) : C_VIOLET.clone().lerp(C_PINK, (u - 0.55) / 0.45);
         tCol[n * 3] = col.r; tCol[n * 3 + 1] = col.g; tCol[n * 3 + 2] = col.b;
       }
       textGeo.attributes.color.needsUpdate = true;
@@ -2080,34 +2085,53 @@
     }
 
     // ---- Awareness A: a ring of phone screens orbiting like satellites ----
-    function makePhoneTexture(imgName) {
-      var tex = canvasTex(256, 512, function (g) {
-        function rr(x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
-        g.fillStyle = '#0b0d16'; rr(4, 4, 248, 504, 40); g.fill();
-        g.strokeStyle = 'rgba(138,180,255,.85)'; g.lineWidth = 4; g.stroke();
-        g.fillStyle = '#fbf6ee'; rr(16, 16, 224, 480, 30); g.fill();
-        g.fillStyle = '#6b3b22'; g.beginPath(); g.arc(50, 70, 22, 0, Math.PI * 2); g.fill();
-        g.fillStyle = '#d9c4a5'; g.fillRect(84, 58, 110, 10); g.fillRect(84, 76, 70, 8);
-        var cols = ['#6b3b22', '#c8913a', '#a8552f', '#d9a55b', '#2a1a10', '#e5b973', '#dc6b3a', '#8a5a2b', '#b5683a'];
-        for (var k = 0; k < 9; k++) { g.fillStyle = cols[k]; g.fillRect(18 + (k % 3) * 74, 120 + Math.floor(k / 3) * 74, 72, 72); }
-      });
-      if (imgName && location.protocol !== 'file:') {
-        var im = new Image();
-        im.onload = function () {
-          var g = tex.image.getContext('2d');
-          g.save(); g.beginPath(); g.rect(16, 104, 224, 280); g.clip();
-          var sc = Math.max(224 / im.width, 280 / im.height), w = im.width * sc, h = im.height * sc;
-          g.drawImage(im, 16 + (224 - w) / 2, 104 + (280 - h) / 2, w, h); g.restore();
-          tex.needsUpdate = true;
-        };
-        im.src = 'images/gujar/' + imgName + '.webp';
+    // Each screen is a mini @gujar_andsons.cashews profile with the real posts, read from
+    // images/gujar/phone-atlas.js (a data URI, so it also works when opened from file://)
+    var ATLAS = window.GUJAR_ATLAS, atlasImg = null, phoneTexs = [];
+    function paintPhone(g, offset) {
+      function rr(x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+      var A = atlasImg && ATLAS;
+      g.clearRect(0, 0, 256, 512);
+      g.fillStyle = '#0b0d16'; rr(4, 4, 248, 504, 40); g.fill();
+      g.strokeStyle = 'rgba(138,180,255,.85)'; g.lineWidth = 4; g.stroke();
+      g.save(); rr(16, 16, 224, 480, 30); g.fillStyle = '#fbf6ee'; g.fill(); g.clip();
+      g.fillStyle = '#0b0d16'; rr(98, 22, 60, 14, 7); g.fill();
+      // Profile header: logo in a story ring, handle and bio
+      var ring = g.createLinearGradient(28, 48, 72, 92); ring.addColorStop(0, '#f59e0b'); ring.addColorStop(0.5, '#dc2626'); ring.addColorStop(1, '#c026d3');
+      g.fillStyle = ring; g.beginPath(); g.arc(50, 70, 23, 0, Math.PI * 2); g.fill();
+      g.fillStyle = '#fbf6ee'; g.beginPath(); g.arc(50, 70, 20.5, 0, Math.PI * 2); g.fill();
+      g.save(); g.beginPath(); g.arc(50, 70, 19, 0, Math.PI * 2); g.clip();
+      if (A) g.drawImage(atlasImg, 0, ATLAS.logoY, ATLAS.logo, ATLAS.logo, 31, 51, 38, 38); else { g.fillStyle = '#6b3b22'; g.fill(); }
+      g.restore();
+      g.fillStyle = '#2a1a10'; g.font = '700 12px Inter, Arial, sans-serif'; g.fillText('gujar_andsons.cashews', 80, 64);
+      g.fillStyle = '#7a5a44'; g.font = '500 9.5px Inter, Arial, sans-serif'; g.fillText('Premium Konkan Kaju', 80, 79); g.fillText('Pure. Fresh. Authentic.', 80, 91);
+      g.fillStyle = '#eadfcd'; g.fillRect(16, 106, 224, 1);
+      // Post grid: 3 across, 4:5 tiles, starting at a different post on each phone
+      var cw = (224 - 4) / 3, ch = cw * 1.25, cols = ['#6b3b22', '#c8913a', '#a8552f', '#d9a55b', '#2a1a10', '#e5b973', '#dc6b3a', '#8a5a2b', '#b5683a'];
+      for (var k = 0; k < 12; k++) {
+        var x = 16 + (k % 3) * (cw + 2), y = 108 + Math.floor(k / 3) * (ch + 2);
+        if (A) { var p = (offset + k) % ATLAS.count; g.drawImage(atlasImg, (p % ATLAS.cols) * ATLAS.tw, Math.floor(p / ATLAS.cols) * ATLAS.th, ATLAS.tw, ATLAS.th, x, y, cw, ch); }
+        else { g.fillStyle = cols[k % 9]; g.fillRect(x, y, cw, ch); }
       }
+      g.restore();
+    }
+    function makePhoneTexture(offset) {
+      var tex = canvasTex(256, 512, function (g) { paintPhone(g, offset); });
+      phoneTexs.push({ tex: tex, offset: offset });
       return tex;
+    }
+    if (ATLAS) {
+      var aim = new Image();
+      aim.onload = function () {
+        atlasImg = aim;
+        phoneTexs.forEach(function (p) { paintPhone(p.tex.image.getContext('2d'), p.offset); p.tex.needsUpdate = true; });
+      };
+      aim.src = ATLAS.src;
     }
     var phoneRing = new THREE.Group(); phoneRing.position.z = -64; scene.add(phoneRing);
     var phones = [], phoneMats = [];
     for (i = 0; i < 8; i++) {
-      var pm = new THREE.MeshBasicMaterial({ map: makePhoneTexture(POSTS[i].img), transparent: true, side: THREE.DoubleSide });
+      var pm = new THREE.MeshBasicMaterial({ map: makePhoneTexture(i * 2), transparent: true, side: THREE.DoubleSide });
       var ph = new THREE.Mesh(new THREE.PlaneGeometry(2.3, 4.6), pm); ph.userData.a = i / 8 * Math.PI * 2; phoneRing.add(ph); phones.push(ph); phoneMats.push(pm);
     }
     var phoneSpread = 0;
