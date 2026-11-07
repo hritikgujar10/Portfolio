@@ -72,6 +72,9 @@
   .dash li::before { content: ''; position: absolute; left: 0; top: .72em; width: 11px; height: 2px; background: var(--accent); }
   .dash b { color: var(--text); font-weight: 600; }
   .case .chips { margin-bottom: 20px; }
+  /* Tighter spacing for case slides with four bullets (same type sizes) */
+  .case.dense .lead { margin-bottom: 16px; } .case.dense .meta { padding: 14px 0; margin-bottom: 16px; }
+  .case.dense .dash { gap: 8px; margin-bottom: 18px; } .case.dense .chips { margin-bottom: 0; }
   .brand { display: inline-flex; align-items: center; height: 34px; padding: 6px 12px; border-radius: 8px; background: #fff; } .brand img { height: 100%; }
 
   .browser { border-radius: 16px; overflow: hidden; border: 1px solid rgba(148,170,255,.22); background: #0c1024; box-shadow: 0 30px 70px -30px rgba(0,0,0,.9); }
@@ -145,6 +148,9 @@
   .cert b { display: block; font-size: 19px; font-weight: 600; } .cert span { font-size: 15px; color: var(--muted); }
   .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 30px; }
   .skills .panel { padding: 22px; margin: 0; } .skills .chips { gap: 7px; } .skills .chip { font-size: 14px; }
+  /* Skills slide: seven certificates in a 4-column grid, with tighter spacing (same type sizes) */
+  .skills-slide .skills { margin-top: 20px; } .skills-slide .skills .panel { padding: 16px 18px; } .skills-slide .skills .chips { gap: 6px; }
+  .skills-slide .certs { grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; } .skills-slide .cert { padding: 14px 16px; gap: 12px; }
 
   /* Contact */
   .contact { text-align: center; padding-top: 205px; }
@@ -163,7 +169,7 @@
   <div class="planet earth" style="width:440px;height:440px;right:-70px;bottom:-110px"></div>
   <div class="planet moon" style="width:70px;height:70px;right:390px;bottom:330px"></div>
   <div class="ring" style="width:240px;height:240px;right:150px;top:30px"></div><div class="planet saturn" style="width:120px;height:120px;right:210px;top:90px"></div>
-  <div class="status">Open to Digital Marketing &amp; Social Media roles · West Haven, CT</div>
+  <div class="status">Open to Digital Marketing, Paid Media &amp; E-commerce roles · West Haven, CT</div>
   <h1>Campaigns that perform,<br>and look <span class="serif">good.</span></h1>
   <div class="byline"><b>Hritik Gujar</b> · Digital Marketer &amp; Designer · Portfolio 2026</div>
   <dl class="contacts">
@@ -180,7 +186,7 @@
     <div>
       <div class="kicker">About</div>
       <h2>Strategy and design,<br><span class="serif">in the same head.</span></h2>
-      <p>I'm a digital marketer with <b>2.5+ years</b> of experience across <b>Google Ads, SEO, e-commerce and field marketing</b>, combined with UI/UX design and front-end development skills.</p>
+      <p>I'm a digital marketer with <b>2.5+ years</b> of experience across <b>Google Ads, Meta Ads, SEO, email marketing and e-commerce</b>, combined with UI/UX design and front-end development skills.</p>
       <p>I hold an <b>MS in Digital Marketing</b> from Sacred Heart University. I bring strategy and design together, so campaigns not only look great but deliver measurable results.</p>
     </div>
     <div>
@@ -188,11 +194,11 @@
         <div><b>2.5+</b><span>Years in digital marketing</span></div>
         <div><b>20+</b><span>Retailers coordinated at Amul</span></div>
         <div><b>8</b><span>Live websites designed and built</span></div>
-        <div><b>3.6</b><span>GPA, MS in Digital Marketing</span></div>
+        <div><b>21</b><span>Instagram posts planned and launched for my family's brand</span></div>
       </div>
       <dl class="facts">
-        <dt>Marketing &amp; analytics tools</dt><dd>Google Ads, GA4, SEMrush, Excel, Meta Business Suite, Canva, Figma</dd>
-        <dt>Strengths</dt><dd>Paid search · SEO · Social media content · E-commerce · Market research · Performance reporting</dd>
+        <dt>Marketing &amp; analytics tools</dt><dd>Google Ads, Meta Ads, GA4, Google Search Console, SEMrush, HubSpot, Klaviyo, Excel, Meta Business Suite, Canva, Figma, Adobe Photoshop, AI tools (Claude, ChatGPT)</dd>
+        <dt>Strengths</dt><dd>Paid search · Paid social · SEO · Email marketing · E-commerce · Social media content · Performance reporting</dd>
       </dl>
     </div>
   </div>
@@ -205,11 +211,11 @@
   <h2>Where I've done marketing <span class="serif">that matters.</span></h2>
   <div class="xp">
     <div class="xp-row"><div class="when">Jul 2026 – Present<small>Nonprofit</small></div><div><h3>UI/UX Designer Intern (Volunteer)</h3><div class="org">Community Dreams Foundation · Remote, USA</div></div><p>Design web and mobile interfaces for Dreamstream, the foundation's volunteer and program-management platform.</p></div>
-    <div class="xp-row"><div class="when">Feb 2023 – Jul 2024<small>Healthcare · E-commerce</small></div><div><h3>E-commerce Specialist</h3><div class="org">Swasthya Lifescience · India</div></div><p>Ran inventory and orders, built weekly and monthly Excel sales reports, and created social posts to promote products.</p></div>
+    <div class="xp-row"><div class="when">Feb 2023 – Jul 2024<small>Healthcare · E-commerce</small></div><div><h3>E-commerce Specialist</h3><div class="org">Swasthya Lifescience · India</div></div><p>Managed product listings, inventory and orders, ran HubSpot email campaigns, handled SEO and social posts, and built weekly and monthly Excel sales reports.</p></div>
     <div class="xp-row"><div class="when">Dec 2021 – Jan 2023<small>Paid search</small></div><div><h3>Content &amp; Brand Specialist</h3><div class="org">Accenture · Airoli, Navi Mumbai, India</div><div class="client">Client: Wish.com</div></div><p>Optimized Google Ads footwear campaigns with keyword research, negative keywords, ad copy tests and bid changes.</p></div>
     <div class="xp-row"><div class="when">Jun 2020 – Apr 2021<small>FMCG · Field</small></div><div><h3>Marketing Intern</h3><div class="org">Amul India · Mumbai</div></div><p>Coordinated 20+ retailers and distributors, supported in-store promotions, and ran customer and retailer surveys.</p></div>
   </div>
-  <div class="edu"><span><b>MS, Digital Marketing</b> · Sacred Heart University, CT · 2026 · GPA 3.6</span><span><b>B.Com</b> · University of Mumbai · 2021</span></div>
+  <div class="edu"><span><b>MS, Digital Marketing</b> · Sacred Heart University, CT · 2026</span><span><b>B.Com</b> · University of Mumbai · 2021</span></div>
   <div class="foot"><span>Hritik Gujar · Digital Marketer &amp; Designer</span><span>03</span></div>
 </section>
 
@@ -250,7 +256,7 @@
             <div class="week"><b>Wk 7</b>Nature's finest · Quality &amp; tradition · Reel</div>
           </div>
         </div>
-        <div class="panel"><div class="plabel">Hashtags used</div><div style="color:var(--accent);font-size:15px;line-height:1.7">#GujarAndSons #FreshFromKonkan #TasteWithTrust #OrganicCashew #HealthyHeart #SnackSmart</div></div>
+        <div class="panel"><div class="plabel">Hashtags used</div><div style="color:var(--accent);font-size:15px;line-height:1.7">#GujarAndSons #FreshFromKonkan #TasteOfNature #TasteWithTrust #OrganicCashew #HealthyHeart #SnackSmart #CashewLove</div></div>
       </div>
     </div>
   </div>
@@ -319,18 +325,19 @@
 
 <!-- 07 Swasthya -->
 <section class="slide">
-  <div class="case">
+  <div class="case dense">
     <div>
       <div class="tagline"><span class="brand ga"><img src="img/swasthya/logo.jpg" alt="Generic Aadhaar"></span><span class="pill">Marketing</span>E-commerce · 2023–2024</div>
       <h1>E-commerce at <span class="serif">Swasthya</span> Lifescience</h1>
       <p class="lead">Managing online sales for a healthcare and wellness company that operates Generic Aadhaar pharmacy stores.</p>
       <dl class="meta"><div><dt>Role</dt><dd>E-commerce Specialist</dd></div><div><dt>Timeline</dt><dd>Feb 2023 – Jul 2024</dd></div></dl>
       <ul class="dash">
-        <li>Managed inventory and order processing to ensure accurate stock and timely deliveries.</li>
+        <li>Uploaded and updated product listings, including images, descriptions and pricing, and kept inventory accurate.</li>
+        <li>Built and sent customer email campaigns in HubSpot and managed contact lists.</li>
+        <li>Handled SEO and social media posts and creatives to drive traffic to the online store.</li>
         <li>Built weekly and monthly Excel sales reports that guided product and stock decisions.</li>
-        <li>Created social media posts and creatives to promote products online.</li>
       </ul>
-      <div class="chips"><span class="chip">E-commerce</span><span class="chip">Reporting</span><span class="chip">Social content</span></div>
+      <div class="chips"><span class="chip">E-commerce</span><span class="chip">Email (HubSpot)</span><span class="chip">SEO</span><span class="chip">Reporting</span></div>
     </div>
     <div>
       <div class="browser"><div class="bar"><i></i><i></i><i></i><span>Generic Aadhaar · Swasthya Lifescience</span></div><img src="img/swasthya/growth.jpg" alt="" style="aspect-ratio:auto"></div>
@@ -505,16 +512,17 @@
 </section>
 
 <!-- 15 Skills & certifications -->
-<section class="slide">
+<section class="slide skills-slide">
   <div class="kicker">Skills &amp; certifications</div>
   <h2>From first impression to final click, <span class="serif">the whole journey.</span></h2>
   <div class="skills">
-    <div class="panel"><div class="plabel">Marketing</div><div class="chips"><span class="chip">Performance Marketing</span><span class="chip">Google Ads (PPC)</span><span class="chip">SEO</span><span class="chip">E-commerce</span><span class="chip">Social Media Content</span><span class="chip">Market Research</span></div></div>
-    <div class="panel"><div class="plabel">Analytics</div><div class="chips"><span class="chip">GA4</span><span class="chip">SEMrush</span><span class="chip">Excel</span><span class="chip">Performance Reporting</span></div></div>
-    <div class="panel"><div class="plabel">Design</div><div class="chips"><span class="chip">Figma</span><span class="chip">Canva</span><span class="chip">Visual Storytelling</span><span class="chip">UI/UX Design</span></div></div>
+    <div class="panel"><div class="plabel">Marketing</div><div class="chips"><span class="chip">Performance Marketing</span><span class="chip">Google Ads (PPC)</span><span class="chip">Meta Ads</span><span class="chip">SEO</span><span class="chip">Email Marketing (HubSpot, Klaviyo)</span><span class="chip">E-commerce Marketing</span><span class="chip">Social Media Content</span><span class="chip">Market Research</span></div></div>
+    <div class="panel"><div class="plabel">Analytics</div><div class="chips"><span class="chip">GA4</span><span class="chip">Google Search Console</span><span class="chip">SEMrush</span><span class="chip">Excel</span><span class="chip">Performance Reporting</span></div></div>
+    <div class="panel"><div class="plabel">Design</div><div class="chips"><span class="chip">Figma</span><span class="chip">Canva</span><span class="chip">Adobe Photoshop</span><span class="chip">AI Tools (Claude, ChatGPT)</span><span class="chip">Visual Storytelling</span><span class="chip">UI/UX Design</span></div></div>
     <div class="panel"><div class="plabel">Collaboration</div><div class="chips"><span class="chip">Agile Teams</span><span class="chip">Cross-functional Collaboration</span></div></div>
   </div>
-  <div class="certs" style="grid-template-columns:repeat(3,1fr);margin-top:22px">
+  <div class="certs">
+    <div class="cert"><span class="ico">&#9733;</span><div><b>HubSpot Email Marketing</b><span>HubSpot Academy</span></div></div>
     <a class="cert" href="https://hritik-gujar.vercel.app/certificates/social-media-marketing-strategy.pdf"><span class="ico">&#9733;</span><div><b>Social Media Marketing: Strategy and Optimization</b><span>LinkedIn Learning · Dec 2025</span></div></a>
     <a class="cert" href="https://www.mbtn.academy/badges.php?id=FofrwtpxwC"><span class="ico">&#9733;</span><div><b>Web Analytics &amp; Marketing Metrics</b><span>MBTN Academy · 10 module badges</span></div></a>
     <a class="cert" href="https://hritik-gujar.vercel.app/certificates/business-analysis-essential-tools.pdf"><span class="ico">&#9733;</span><div><b>Business Analysis: Essential Tools and Techniques</b><span>LinkedIn Learning · Dec 2025</span></div></a>
@@ -531,7 +539,7 @@
   <div class="planet earth" style="width:180px;height:180px;right:90px;top:70px"></div>
   <div class="kicker">Contact</div>
   <h1>Let's build something<br>that <span class="serif">performs.</span></h1>
-  <p>Open to Digital Marketing and Social Media roles, on-site, hybrid or remote across the United States.</p>
+  <p>Open to Digital Marketing, Paid Media and E-commerce roles, on-site, hybrid or remote across the United States.</p>
   <div class="btns">
     <a class="primary" href="mailto:hritikgujar10@gmail.com">hritikgujar10@gmail.com</a>
     <a href="https://hritik-gujar.vercel.app">hritik-gujar.vercel.app</a>
