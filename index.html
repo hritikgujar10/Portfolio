@@ -127,6 +127,7 @@
   /* The particle name is drawn on canvas; this real heading sits on top so it stays selectable and readable by screen readers */
   .hero-name { position: absolute; left: 0; right: 0; top: 35%; transform: translateY(-50%); font-size: min(10.5vw, 150px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: transparent; }
   .hero-title { font-size: .82rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .hero-open { font-size: .9rem; color: var(--soft); margin: -4px 0 14px; }
   .hero-headline { font-size: clamp(1.4rem, 2.8vw, 2.2rem); font-weight: 600; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 30px; }
   .hero-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 5vh; }
   .scroll-cue { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: .72rem; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
@@ -485,6 +486,7 @@
     .funnel-nav .dot { width: 10px; height: 10px; }
     .funnel-track { right: 4px; }
     .hero-name { top: 27%; font-size: 21vw; line-height: .95; }
+    .hero-title { letter-spacing: .2em; }
     .hero-ctas { width: 100%; }
     .hero-ctas .btn { flex: 1 1 40%; padding: 13px 14px; }
     .hero-ctas .btn-accent { flex-basis: 100%; }
@@ -586,7 +588,8 @@
 <!-- ============ 1. HERO: THE SIGNAL ============ -->
 <section class="hero" id="hero" data-z="34" data-stage="signal">
   <h1 class="hero-name">Hritik Gujar</h1>
-  <p class="hero-title intro">Digital Marketer &amp; Designer</p>
+  <p class="hero-title intro">Digital Marketing &amp; Web Designer</p>
+  <p class="hero-open intro">Open to Marketing Coordinator &amp; Digital Marketing roles · Open to relocation anywhere in the US</p>
   <p class="hero-headline intro">Campaigns that perform, and look <span class="serif">good.</span></p>
   <div class="hero-ctas intro">
     <a href="#awareness" class="btn btn-accent">View Work
@@ -940,42 +943,8 @@
       </div>
     </article>
 
-    <!-- C) Dreamstream -->
-    <article class="project" id="dreamstream">
-      <div class="win-col">
-        <button class="window" data-open="dreamstream" aria-haspopup="dialog" aria-label="Open the Dreamstream case study">
-          <span class="win-bar"><i></i><i></i><i></i><span class="url">cdreamstream.org</span></span>
-          <span class="ph shot"><img src="images/projects/dreamstream.webp" alt="Dreamstream homepage" width="1280" height="800" loading="lazy" decoding="async"></span>
-        </button>
-      </div>
-      <div class="side-col">
-        <div class="proj-head reveal">
-          <div class="tagline"><span class="brand-mark brand-cdf"><img src="images/brands/community-dreams-mark.png" alt="" width="96" height="96"><span>Community Dreams Foundation</span></span><span class="pill">Volunteer</span>Nonprofit · Web &amp; mobile</div>
-          <h3><span class="serif">Dreamstream</span></h3>
-          <p class="one-liner">The volunteer and program-management platform of Community Dreams Foundation.</p>
-          <div class="open-btn"><button class="text-btn" data-open="dreamstream">Open case study →</button><a class="ext" href="https://cdreamstream.org" target="_blank" rel="noopener">Visit site ↗</a></div>
-        </div>
-      </div>
-      <div class="detail">
-        <dl class="meta">
-          <div><dt>Role</dt><dd>UI/UX Designer Intern (Volunteer)</dd></div>
-          <div><dt>Timeline</dt><dd>Jul 2026 – Present</dd></div>
-          <div><dt>Users</dt><dd>Volunteers, interns, program leaders</dd></div>
-          <div><dt>Tools</dt><dd>Figma</dd></div>
-        </dl>
-        <div class="h-label">What I did</div>
-        <ul class="dash">
-          <li>Designed web and mobile interfaces for Dreamstream, creating user flows, wireframes, and high-fidelity prototypes in Figma</li>
-          <li>Delivered consistent, responsive page designs across web and mobile, supporting onboarding and program management for volunteers, interns, and program leaders</li>
-          <li>Collaborated with product managers and developers in an Agile setup, handing off design specs for the live platform</li>
-        </ul>
-        <div class="chips"><span class="chip">UI/UX</span><span class="chip">Figma</span><span class="chip">Agile</span></div>
-        <p class="case-link"><a class="ext" href="https://cdreamstream.org" target="_blank" rel="noopener">cdreamstream.org ↗</a></p>
-      </div>
-    </article>
-
-    <!-- D) Artha -->
-    <article class="project flip" id="artha">
+    <!-- C) Artha -->
+    <article class="project" id="artha">
       <div class="win-col">
         <button class="window" data-open="artha" aria-haspopup="dialog" aria-label="Open the Artha case study">
           <span class="win-bar"><i></i><i></i><i></i><span class="url">artha-finance-woad.vercel.app</span></span>
@@ -1004,7 +973,7 @@
       </div>
     </article>
 
-    <!-- E) More work -->
+    <!-- D) More work -->
     <div class="section-head reveal" style="margin-bottom:24px">
       <h2>More <span class="serif">work</span></h2>
     </div>
@@ -1039,14 +1008,12 @@
     <div class="timeline" id="timeline">
       <span class="tl-track"><span class="tl-fill" id="tl-fill"></span></span>
       <div class="tl-item">
-        <div class="tl-head"><h3>UI/UX Designer Intern (Volunteer)</h3><span class="tl-date">Jul 2026 – Present</span></div>
+        <div class="tl-head"><h3>UI/UX Design Intern (Volunteer)</h3><span class="tl-date">Jul 2026 – Present</span></div>
         <div class="tl-org">Community Dreams Foundation · Remote, USA</div>
         <ul class="dash tl-points">
-          <li>Designed web and mobile interfaces for Dreamstream, the volunteer and program-management platform of Community Dreams Foundation, creating user flows, wireframes, and high-fidelity prototypes in Figma</li>
-          <li>Delivered consistent, responsive page designs across web and mobile, supporting onboarding and program management for volunteers, interns, and program leaders</li>
-          <li>Collaborated with product managers and developers in an Agile setup, handing off design specs for the live platform at <a class="ext" href="https://cdreamstream.org" target="_blank" rel="noopener">cdreamstream.org ↗</a></li>
+          <li>Help the design team each week with UI/UX tasks, such as screen updates and design feedback in Figma.</li>
+          <li>Collaborate remotely with designers and team members to review screens and share ideas.</li>
         </ul>
-        <a class="tl-go" href="#dreamstream">See Dreamstream →</a>
       </div>
       <div class="tl-item">
         <div class="tl-head"><h3>Master of Science in Digital Marketing</h3><span class="tl-date">Sep 2024 – Jan 2026</span></div>
@@ -1063,9 +1030,13 @@
       </div>
       <div class="tl-item">
         <div class="tl-head"><h3>E-commerce Specialist</h3><span class="tl-date">Feb 2023 – Jul 2024</span></div>
-        <div class="tl-org">Swasthya Lifescience Pvt. Ltd. · India</div>
+        <div class="tl-org">Swasthya Lifescience Pvt. Ltd. · Thane, India</div>
         <ul class="dash tl-points">
-          <li>Managed product listings, inventory and orders, ran HubSpot email campaigns, handled SEO and social posts, and built weekly and monthly Excel sales reports.</li>
+          <li>Maintained and updated the company website, adding new pages, product details, pricing, and offers.</li>
+          <li>Wrote and sent email campaigns and newsletters in HubSpot, building contact lists and testing every email before launch.</li>
+          <li>Created social media posts and promotional banners in Photoshop and Canva.</li>
+          <li>Worked with the HR team to plan and set up company events.</li>
+          <li>Coordinated with warehouse and delivery partners and built weekly Excel reports for managers.</li>
         </ul>
         <a class="tl-go" href="#swasthya">See the case study →</a>
       </div>
@@ -1074,10 +1045,10 @@
         <div class="tl-org">Accenture · Airoli, Navi Mumbai, India</div>
         <div class="tl-client">Client: Wish.com</div>
         <ul class="dash tl-points">
-          <li>Researched keywords and competitors in SEMrush to identify better-performing search terms</li>
-          <li>Optimized campaigns through negative keywords, ad copy testing, and bid adjustments, improving CTR and lowering CPC</li>
-          <li>Tracked performance in Google Analytics and built Figma dashboards for clear team reporting</li>
-          <li>Wrote and reviewed product descriptions and listings for Wish.com for accuracy and policy compliance</li>
+          <li>Ran Google Ads search campaigns for the footwear category, testing ad copy, adding negative keywords, and adjusting bids.</li>
+          <li>Researched keywords and competitors in SEMrush to support SEO.</li>
+          <li>Wrote and reviewed product descriptions and listings for a high daily volume of products.</li>
+          <li>Prepared weekly performance reports from Google Analytics.</li>
         </ul>
         <a class="tl-go" href="#wish">See the case study →</a>
       </div>
@@ -1119,7 +1090,6 @@
           <li><a href="#bigelow" data-case="bigelow">Bigelow Benefits capstone <span>Capstone project</span></a></li>
           <li><a href="#craftfuel" data-case="craftfuel">Craft Fuel <span>Client</span></a></li>
           <li><a href="#gujar-site" data-case="gujar-site">Gujar &amp; Sons storefront <span>Family business</span></a></li>
-          <li><a href="#dreamstream" data-case="dreamstream">Dreamstream <span>Volunteer</span></a></li>
           <li><a href="#artha" data-case="artha">Artha <span>Demo</span></a></li>
         </ul>
       </div>
@@ -1127,17 +1097,17 @@
 
     <div class="section-head reveal" style="margin-bottom:20px"><h2 style="font-size:clamp(1.6rem,3vw,2.2rem)">Certifications</h2></div>
     <div class="certs">
+      <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>HubSpot Inbound Marketing</b><span>HubSpot Academy · Nov 2026</span></div></div>
       <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>HubSpot Email Marketing</b><span>HubSpot Academy</span></div></div>
-      <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>HubSpot Inbound Marketing</b><span>HubSpot Academy · Valid Nov 2026 – Dec 2028</span></div></div>
       <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Google Ads Search</b><span>Google</span></div></div>
       <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Google Analytics (GA4)</b><span>Google</span></div></div>
-      <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Meta Blueprint</b><span>Meta</span></div></div>
+      <div class="cert reveal"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Meta Certification</b><span>Meta</span></div></div>
+      <a class="cert reveal" href="https://www.mbtn.academy/badges.php?id=FofrwtpxwC" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Web Analytics &amp; Marketing Metrics</b><span>MBTN Academy · 10 module badges, from market share and margins to CLV, CAC, advertising and web metrics</span><em class="cert-view">View badges ↗</em></div></a>
       <a class="cert reveal" href="certificates/ai-driven-product-designer.pdf" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>The AI-Driven Product Designer</b><span>LinkedIn Learning · Sep 2026</span><em class="cert-view">View certificate ↗</em></div></a>
       <a class="cert reveal" href="certificates/figma-essential-training.pdf" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Figma Essential Training</b><span>LinkedIn Learning · Sep 2026</span><em class="cert-view">View certificate ↗</em></div></a>
       <a class="cert reveal" href="certificates/business-analysis-essential-tools.pdf" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Business Analysis: Essential Tools and Techniques</b><span>LinkedIn Learning · Dec 2025</span><em class="cert-view">View certificate ↗</em></div></a>
       <a class="cert reveal" href="certificates/foundations-of-responsible-ai.pdf" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Foundations of Responsible AI</b><span>LinkedIn Learning · Dec 2025</span><em class="cert-view">View certificate ↗</em></div></a>
       <a class="cert reveal" href="certificates/social-media-marketing-strategy.pdf" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Social Media Marketing: Strategy and Optimization</b><span>LinkedIn Learning · Dec 2025</span><em class="cert-view">View certificate ↗</em></div></a>
-      <a class="cert reveal" href="https://www.mbtn.academy/badges.php?id=FofrwtpxwC" target="_blank" rel="noopener"><span class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span><div><b>Web Analytics &amp; Marketing Metrics</b><span>MBTN Academy · 10 module badges, from market share and margins to CLV, CAC, advertising and web metrics</span><em class="cert-view">View badges ↗</em></div></a>
     </div>
   </div>
 </section>
@@ -1361,8 +1331,8 @@
   var SKILLS = [
     ['Marketing', [['Performance Marketing', 'wish swasthya craftfuel bigelow'], ['Google Ads (PPC)', 'wish'], ['Meta Ads', ''], ['SEO', 'wish swasthya'], ['Email Marketing (HubSpot, Klaviyo)', 'swasthya'], ['E-commerce Marketing', 'swasthya craftfuel gujar-site'], ['Social Media Content', 'gujar swasthya bigelow'], ['Market Research', 'amul gujar bigelow']]],
     ['Analytics', [['GA4', 'wish'], ['Google Search Console', ''], ['SEMrush', 'wish'], ['Excel', 'amul swasthya bigelow'], ['Performance Reporting', 'wish swasthya amul bigelow']]],
-    ['Design', [['Figma', 'wish dreamstream'], ['Canva', 'swasthya'], ['Adobe Photoshop', ''], ['AI Tools (Claude, ChatGPT)', ''], ['Visual Storytelling', 'gujar gujar-site'], ['UI/UX Design', 'dreamstream artha craftfuel bigelow']]],
-    ['Collaboration', [['Agile Teams', 'dreamstream'], ['Cross-functional Collaboration', 'dreamstream amul wish']]]
+    ['Design', [['Figma', 'wish'], ['Canva', 'swasthya'], ['Adobe Photoshop', ''], ['AI Tools (Claude, ChatGPT)', ''], ['Visual Storytelling', 'gujar gujar-site'], ['UI/UX Design', 'artha craftfuel bigelow']]],
+    ['Collaboration', [['Agile Teams', ''], ['Cross-functional Collaboration', 'amul wish']]]
   ];
   var orbitStage = document.getElementById('orbit-stage'), groupsEl = document.getElementById('skill-groups'), orbitHTML = '', groupsHTML = '';
   SKILLS.forEach(function (g) {
